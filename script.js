@@ -9,6 +9,7 @@ var attTypeDel = document.querySelector('#attTypeDel');
 var view = document.querySelector('.view');
 var out = document.querySelector('.out');
 var del = document.querySelector('.del');
+var dlt = document.querySelector('.dlt');
 
 
 var topica = [];
@@ -71,10 +72,6 @@ reg.addEventListener("submit", (e) => {
         reg.reset();
         document.querySelector('.stt').innerText = "Added to waitlist";
     }
-    console.log(topica);
-    console.log(topicb);
-    console.log(workshopa);
-    console.log(workshopb);
     console.log(document.querySelector('.taconfirmed'));
     document.querySelector('.taconfirmed').innerText = topica;
     document.querySelector('.tbconfirmed').innerText = topicb;
@@ -87,36 +84,47 @@ reg.addEventListener("submit", (e) => {
 })
 
 
-del.addEventListener("submit", () => {
+del.addEventListener("submit", (e) => {
     e.preventDefault();
-    console.log(evtsDel.value);
+    var stt = 0;
     if (evtsDel.value == "Topic A") {
+        console.log("!");
         for (var i = 0; i < topica.length; i++) {
-            if (topica[i][0] == nameDel) {
+            if (topica[i][0] == nameDel.value) {
                 topica.splice(i, 1);
+                stt = 1;
             }
         }
     }
     else if (evtsDel.value == "Topic B") {
         for (var i = 0; i < topicb.length; i++) {
-            if (topicb[i][0] == nameDel) {
+            if (topicb[i][0] == nameDel.value) {
                 topicb.splice(i, 1);
+                stt = 1;
             }
         }
     }
     else if (evtsDel.value == "Workshop A") {
         for (var i = 0; i < workshopa.length; i++) {
-            if (workshopa[i][0] == nameDel) {
+            if (workshopa[i][0] == nameDel.value) {
                 workshopa.splice(i, 1);
+                stt = 1;
             }
         }
     }
     else if (evtsDel.value == "Workshop B") {
         for (var i = 0; i < workshopb.length; i++) {
-            if (workshopb[i][0] == nameDel) {
+            if (workshopb[i][0] == nameDel.value) {
                 workshopb.splice(i, 1);
+                stt = 1;
             }
         }
+    }
+    if (stt == 0) {
+        dlt.innerText = "No such data found"
+    }
+    else if (stt = 1) {
+        dlt.innerText = "Deletion Successful!"
     }
     document.querySelector('.taconfirmed').innerText = topica;
     document.querySelector('.tbconfirmed').innerText = topicb;
@@ -126,4 +134,5 @@ del.addEventListener("submit", () => {
     document.querySelector('.tbwaitlist').innerText = topicbWt;
     document.querySelector('.wawaitlist').innerText = workshopaWt;
     document.querySelector('.wbwaitlist').innerText = workshopbWt;
+    del.reset();
 })
