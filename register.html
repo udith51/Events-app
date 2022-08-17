@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="back" onclick="location.href='./index.html'">Back to main screen</div>
+    <br><br><br>
+    <form action="" class="reg">
+        REGISTER
+        <label for="">Enter Name</label>
+        <input type="text" placeholder="Enter your name" class="nameReg">
+        <br><br>
+        <label for="">Select attendee type</label>
+        <select name="attType" id="attType">
+            <option value="" disabled selected>--Attendee--</option>
+            <option value="Student">Student</option>
+            <option value="Professor">Professor</option>
+            <option value="Business Person">Business Person</option>
+            <option value="Special Guest">Special Guest</option>
+        </select>
+        <br><br>
+        <label for="evts">Select event type</label>
+        <select name="" id="evts">
+            <option value="" disabled selected>--Event--</option>
+            <option value="Topic A">Topic A : 28 Aug 4pm-8pm</option>
+            <option value="Topic B">Topic B : 27 Aug 8am-9am</option>
+            <option value="Workshop A">Workshop A : 28th Aug 4:30pm-5:30pm</option>
+            <option value="Workshop B">Workshop B: 28th Aug 4:30pm-5:30pm</option>
+        </select>
+        <br><br>
+        <button type="submit" class="submit">Submit</button>
+        <div class="stt"></div>
+    </form>
+
+    <br><br><br><br>
+
+    <form class="del">
+        DELETE
+        <label for="">Enter Name</label>
+        <input type="text" placeholder="Enter your name" class="nameDel">
+        <br><br>
+        <label for="">Select attendee type</label>
+        <select name="attTypeDel" id="attType">
+            <option value="" disabled selected>--Attendee--</option>
+            <option value="Student">Student</option>
+            <option value="Professor">Professor</option>
+            <option value="Business Person">Business Person</option>
+            <option value="Special Guest">Special Guest</option>
+        </select>
+        <br><br>
+        <label for="evts">Select event type</label>
+        <select name="" id="evtsDel">
+            <option value="" disabled selected>--Event--</option>
+            <option value="Topic A">Topic A : 28 Aug 4pm-8pm</option>
+            <option value="Topic B">Topic B : 27 Aug 8am-9am</option>
+            <option value="Workshop A">Workshop A : 28th Aug 4:30pm-5:30pm</option>
+            <option value="Workshop B">Workshop B: 28th Aug 4:30pm-5:30pm</option>
+        </select>
+        <br><br>
+        <button type="submit" class="delete">Delete</button>
+        <div class="dlt"></div>
+    </form>
+    <div class="out">
+        <div class="ta">
+            Topic A: Confirmed
+            <br>
+            <div class="taconfirmed"></div>
+            <br>
+            Topic A: Waitlist
+            <br>
+            <div class="tawaitlist"></div>
+        </div>
+        <br><br>
+        <div class="tb">
+            Topic B: Confirmed
+            <br>
+            <div class="tbconfirmed"></div>
+            <br>
+            Topic B: Waitlist
+            <br>
+            <div class="tbwaitlist"></div>
+        </div>
+        <br><br>
+        <div class="wa">
+            Workshop A: Confirmed
+            <br>
+            <div class="waconfirmed"></div>
+            <br>
+            Workshop A: Waitlist
+            <br>
+            <div class="wawaitlist"></div>
+        </div>
+        <br><br>
+        <div class="wb">
+            Workshop B: Confirmed
+            <br>
+            <div class="wbconfirmed"></div>
+            <br>
+            Workshop B : Waitlist
+            <br>
+            <div class="wbwaitlist"></div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

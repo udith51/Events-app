@@ -1,0 +1,66 @@
+.title {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 15px;
+    color: green;
+}
+
+.checks {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.checks div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid black;
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    padding: 2px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    background-color: antiquewhite;
+}
+
+.back {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+form {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.out {
+    margin-top: 10px;
+}
+
+/* .ta,
+.tb,
+.wa,
+.wb {
+    display: flex;
+    align-items: center;
+}
+
+.taconfirmed,
+.tawaitlist,
+.tbconfirmed,
+.tbwaitlist,
+.waconfirmed,
+.wawaitlist,
+.wbconfirmed,
+.wbwaitlist {
+    flex: 1;
+    align-items: center;
+    flex-direction: column;
+} */
